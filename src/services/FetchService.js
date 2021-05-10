@@ -6,7 +6,8 @@ export const post = (path, body) => fetch(path, {
     headers : {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
-    }
+    },
+    credentials: "include"
 }).then(res => res.text()).then(res => res);
 
 // export const drop = path => fetch(path, { method: 'DELETE' }).then(res => res.text()).then(data => data);

@@ -73,3 +73,9 @@ form input[type="button"]:hover,
 form button[type="submit"]:hover {
     background: #2EBC99;
 }
+
+.inputSuccess {
+    box-shadow: 0 0 5px #43D1AF;
+    padding: 3%;
+    border: 10px solid #43D1AF;
+}

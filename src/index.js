@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import LoginScreen from "./screens/user/LoginScreen/LoginScreen";
+import RegisterScreen from "./screens/user/RegisterScreen/RegisterScreen";
 import App from "./App";
 
 ReactDOM.render(
@@ -13,6 +14,7 @@ ReactDOM.render(
         <Router>
             <Route exact path="/" component={App} />
             <Route exact path="/login" component={LoginScreen} />
+            <Route exact path="/register" component={RegisterScreen} />
         </Router>
     </React.StrictMode>,
     document.getElementById('root')

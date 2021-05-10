@@ -1,4 +1,4 @@
-import styles from './FormLogin.module.css';
+// import styles from './FormLogin.module.css';
 import { useHistory } from "react-router-dom";
 import { useRef, useState } from "react";
 import {postLoginService} from "../../../services/UserService";
@@ -25,7 +25,6 @@ export function FormLogin(props) {
             // if (validPassword.test(e.target.value)) { passwordMajRef.current.innerText = ""; }
             if ( len <= 0 ) {
                 text = "`Le mot de passe est bon";
-                e.target.classList.className = styles.inputSuccess;
             }
             passwordLengthRef.current.innerText = text;
         }
