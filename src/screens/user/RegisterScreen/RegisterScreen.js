@@ -1,7 +1,12 @@
 import {FormRegister} from "../../../components/user/FormRegister/FormRegister";
-import '../../../styles/form.css';
+import {authentication} from "../../../services/AuthenticationService";
+import App from "../../../App";
 
 const RegisterScreen =  () => {
+
+    if (authentication) {
+        return <App />
+    }
     return <FormRegister name="Nouveau" />;
 };
 

@@ -1,6 +1,13 @@
-export const get = (path) => fetch(path).then(res => res.json()).then(data => data);
+const urlApi = "http://localhost:3001/";
 
-export const post = (path, body) => fetch(path, {
+export const get = async (path) => {
+    console.log(urlApi+path)
+    let res = await fetch(urlApi + path, {credentials: "include"});
+    let data = await res.json();
+    return data;
+}
+
+export const post = (path, body) => fetch(urlApi + path, {
     method: "POST",
     body: JSON.stringify(body),
     headers : {
